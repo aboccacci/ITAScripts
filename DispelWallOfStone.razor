@@ -1,0 +1,7 @@
+@setvar! wallOfStoneID 0x0082
+
+if findtype wallOfStoneID true as wos
+    cast 'Dispel Field'
+    wft 3000
+    target wos
+endif
