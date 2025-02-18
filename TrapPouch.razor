@@ -1,0 +1,17 @@
+@setvar! magicTrapScrollID 0x1F39
+@setvar! untrappedPouchID 0x0E79
+@setvar! untrappedPouchHue 0x0000
+
+if findtype untrappedPouchID backpack untrappedPouchHue as pouch
+    if findtype magicTrapScrollID backpack as scroll
+      dclick scroll
+    elseif skill 'Magery' > 0
+      cast 'Magic Trap'  
+    else
+      overhead ':: OUT OF SCROLLS ::' 33
+    endif
+    wft 5000
+    target pouch
+else
+    overhead ':: OUT OF UNTRAPPED POUCHES ::' 33
+endif
