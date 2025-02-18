@@ -1,0 +1,512 @@
+@setvar! animateDeadID 0x2260
+@setvar! bloodOathID 0x2261
+@setvar! corpseSkinID 0x2262
+@setvar! curseWeaponID 0x2263
+@setvar! evilOmenID 0x2264
+@setvar! horrificBeastID 0x2265
+@setvar! lichFormID 0x2266
+@setvar! mindRotID 0x2267
+@setvar! painSpikeID 0x2268
+@setvar! poisonStrikeID 0x2269
+@setvar! strangleID 0x226A
+@setvar! summonFamiliarID 0x226B
+@setvar! vampiricEmbraceID 0x226C
+@setvar! vengefulSpiritID 0x226D
+@setvar! witherID 0x226E
+@setvar! wraithFormID 0x226F
+@setvar! exorcismID 0x2270
+@setvar! necrobookID 0x2253
+@setvar! gumpID 2448411245
+
+overhead ':: SELECT THE ORIGINAL NECROBOOK ::'
+@setvar! bookFrom
+
+wait 1000
+
+ignore bookFrom
+
+while not dead
+    if findtype necrobookID backpack as necrobook
+        setvar currentBook necrobook
+    else
+        overhead ':: OUT OF NECROBOOKS ::' 33
+        stop
+    endif
+
+    if findtype 0x0FBF as tool
+        dclick tool
+        wait 250
+        waitforgump gumpID 5000
+        gumpresponse 57
+        wait 500
+    else
+        overhead ':: OUT OF TOOLS ::' 33
+        stop
+    endif    
+    
+    while mana < 25
+        skill 'Meditation'
+        wait 3000
+    endwhile
+
+    while not findtype animateDeadID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 2
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype animateDeadID backpack as animateDead
+        menu animateDead 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 15
+        skill 'Meditation'
+        wait 3000
+    endwhile
+
+    while not findtype bloodOathID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 9
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype bloodOathID backpack as bloodOath
+        menu bloodOath 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 15
+        skill 'Meditation'
+        wait 3000
+    endwhile
+
+    while not findtype corpseSkinID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 16
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype corpseSkinID backpack as corpseSkin
+        menu corpseSkin 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 10
+        skill 'Meditation'
+        wait 3000
+    endwhile
+
+    while not findtype curseWeaponID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 23
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype curseWeaponID backpack as curseWeapon
+        menu curseWeapon 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 15
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype evilOmenID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 30
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype evilOmenID backpack as evilOmen
+        menu evilOmen 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 15
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype horrificBeastID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 37
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype horrificBeastID backpack as horrificBeast
+        menu horrificBeast 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 25
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype lichFormID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 44
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype lichFormID backpack as lichForm
+        menu lichForm 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 20
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype mindRotID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 51
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype mindRotID backpack as mindRot
+        menu mindRot 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 5
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype painSpikeID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 58
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype painSpikeID backpack as painSpike
+        menu painSpike 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+
+    while mana < 20
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype poisonStrikeID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 65
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype poisonStrikeID backpack as poisonStrike
+        menu poisonStrike 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 30
+        skill 'Meditation'
+        wait 3000
+    endwhile
+
+    while not findtype strangleID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 72
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype strangleID backpack as strangle
+        menu strangle 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 20
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype summonFamiliarID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 79
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype summonFamiliarID backpack as summonFamiliar
+        menu summonFamiliar 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 30
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype vampiricEmbraceID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 86
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype vampiricEmbraceID backpack as vampiricEmbrace
+        menu vampiricEmbrace 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 45
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype vengefulSpiritID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 93
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype vengefulSpiritID backpack as vengefulSpirit
+        menu vengefulSpirit 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+
+    while mana < 30
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype witherID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 100
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype witherID backpack as wither
+        menu wither 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+
+    while mana < 20
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype wraithFormID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 107
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype wraithFormID backpack as wraithForm
+        menu wraithForm 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    while mana < 40
+        skill 'Meditation'
+        wait 3000
+    endwhile
+    
+    while not findtype exorcismID backpack
+        if findtype 0x0FBF as tool
+            dclick tool
+            wait 250
+        else
+            overhead ':: OUT OF TOOLS ::' 33
+            stop
+        endif 
+        waitforgump gumpID 5000
+        gumpresponse 114
+        waitforgump gumpID 5000
+
+        wait 1000
+    endwhile
+    
+    if findtype exorcismID backpack as exorcism
+        menu exorcism 0
+        wft 2000
+        target currentBook
+        wait 600
+    endif
+    
+    ignore currentBook
+    
+    wait 600
+    
+    overhead ':: COMPLETED CURRENT BOOK ::'
+    wait 2000
+endwhile
