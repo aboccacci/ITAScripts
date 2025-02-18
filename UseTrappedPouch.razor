@@ -1,0 +1,8 @@
+@setvar! trappedPouchID 0x0E79
+@setvar! trappedPouchHue 0x0021
+
+if findtype trappedPouchID backpack trappedPouchHue as pouch
+    dclick pouch
+else
+    overhead ':: OUT OF POUCHES ::' 33
+endif
