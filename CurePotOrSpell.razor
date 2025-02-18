@@ -1,0 +1,9 @@
+@setvar! cureID 0x0F07
+
+if findtype cureID backpack as curePot
+    dclick curePot
+else
+    cast 'Cure'
+    wft 3000
+    hotkey 'Target Self'
+endif
