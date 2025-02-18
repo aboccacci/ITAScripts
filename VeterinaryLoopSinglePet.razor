@@ -1,0 +1,10 @@
+@setvar! pet
+
+while not dead
+    if findtype 0x0E21 backpack as bandages
+        dclick bandages
+        waitfortarget 3000
+        target pet
+        wait 2100
+    endif
+endwhile
